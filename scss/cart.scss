@@ -1,0 +1,147 @@
+@import "../import/variable";
+@import "../import/header";
+@import "../import/footer";
+
+
+.link_page {
+	.container {
+		padding-left: 3%;
+	}
+	.visited_name {
+		margin-top: 20px;
+		font-size: $font-size;
+		span {
+			color: $color-green;
+			&::before {
+				content: "/\00a0";
+				padding-left: 3px;
+			}
+		}
+	}
+}
+
+.title {
+	h4 {
+		color: $color-green;
+		padding: 67px 10px;
+	}
+}
+.content {
+	text-align: center;
+	text-transform: inherit;
+	text-transform: uppercase;
+	.container {
+		padding-left: 1.5%;
+	}
+	thead {
+		background: $color-green;
+		color: white;
+		font-size: 14px;
+	}
+	tbody {
+		tr {
+			color: $color-gray;
+		}
+		td {
+			width: 155px;
+			height: 155px;
+			padding-top: 6%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		.name {
+			color: $color-green;
+		}
+		.img {
+			padding: 15px;
+		}
+		.amount {
+			a {
+				border: 1px solid $color-gray;
+				padding: 10px 17px;
+			}
+		}
+		.trash {
+			i {
+				font-size: 13px;
+				color: $color-gray;
+				cursor: pointer;
+				&:hover {
+					color: red;
+				}
+			}
+		}
+	}
+}
+
+.button {
+	    margin: 30px 0px;
+	    text-transform: uppercase;
+	.btn {
+		display: flex;
+	    position: relative;
+	    left: 67%;
+	}
+	.cancel {
+		border: 1px solid $color-green;
+		border-radius: 50px;
+		margin-right: 20px;
+		padding: 10px 12px;
+		color: $color-green;
+		&:hover {
+			background: $color-green;
+			color: white;
+			border: 1px solid $color-green;
+		}
+	}
+	.purchase {
+		background: white;
+		border-radius: 50px;
+		padding: 10px 12px;
+		border: 1px solid $color-green;
+		color: $color-green;
+		&:hover {
+			background: $color-green;
+			color: white;
+			border: 1px solid $color-green;
+		}
+	}
+}
+.total {
+	.total_table {
+		td {
+			padding: 31px 0px;
+			text-align: center;
+			color: $color-green;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.name, .price {
+			background: $color-green;
+			color: white;
+		}
+	}
+}
+.buy {
+	.buy_btn {
+		position: relative;
+    	left: 80%;
+    	margin-top: 26px;
+    	margin-bottom: 175px;
+	}
+	.btn_buy {
+		background: white;
+		border-radius: 50px;
+		padding: 10px 12px;
+		color: $color-green;
+		border: 1px solid $color-green;
+		&:hover {
+			background: $color-green;
+			color: white;
+			border: 1px solid $color-green;
+			cursor: pointer;
+		}
+	}
+}
