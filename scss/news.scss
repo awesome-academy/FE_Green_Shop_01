@@ -1,0 +1,264 @@
+@import "../import/variable";
+@import "../import/header";
+@import "../import/footer";
+
+p {
+	font-size: 13px;
+	color: $color-gray;
+}
+body {
+	background: #fbf9f9;
+}
+
+
+// Common
+.section_title_all {
+	width: 100%;
+	font-family: 'RobotoSlab Bold';
+	padding-top: 40px;
+	color: $color-green;
+	span {
+		border-bottom: 2px solid $color-green;
+		padding-bottom: 17px;
+		font-weight: bold;
+	}
+}
+// //Common
+
+.link_page {
+	.container {
+		padding-left: 3%;
+	}
+	.visited_name {
+		margin-top: 20px;
+		margin-bottom: 24px;
+		font-size: $font-size;
+		span {
+			color: $color-green;
+			&::before {
+				content: "/\00a0";
+				padding-left: 3px;
+			}
+		}
+	}
+}
+.content {
+	.container {
+		padding-left: 3%;
+	}
+	.section_product_item {
+		ul {
+			padding: 0;
+			width: 100%;
+			li {
+				list-style: none;
+				border-bottom: 1px solid $color-gray;
+				padding: 10px 0px;
+				&:hover {
+					color: $color-green;
+					cursor: pointer;
+				}
+				i {
+					color: $color-gray;
+					p {
+						color: $color-green;
+						float: right;
+						margin: 0;
+						font-size: 15px;
+					}
+					&::before {
+						padding-right: 5px;
+					}
+					&:hover {
+						color: $color-green;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	.section_product_image {
+		.col-md-4, .col-md-8 {
+			padding: 0;
+			padding-bottom: 20px;
+			p {
+				color: black;
+				font-size: 13px;
+			}
+		}
+	}
+	.blog_tag1 {
+		.blog_tag_item1_1 {
+			margin-right: 13px;
+			a {
+				padding: 7px;
+				color: black;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+					text-decoration: none;
+				}
+			}
+		}
+		.blog_tag_item1_2 {
+			a {
+				padding: 7px 24px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.blog_tag2 {
+		.blog_tag_item2_1 {
+			margin-right: 13px;
+			a {
+				padding: 7px 7px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+		.blog_tag_item2_2 {
+			margin-right: 13px;
+			a {
+				padding: 7px 10px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+		.blog_tag_item2_3 {
+			a {
+				padding: 7px 10px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.blog_tag3 {
+		.blog_tag_item3_1 {
+			margin-right: 13px;
+			a {
+				padding: 7px 22px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+		.blog_tag_item3_2 {
+			a {
+				padding: 7px 20px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.blog_tag4 {
+		.blog_tag_item4_1 {
+			margin-right: 13px;
+			a {
+				padding: 7px 24px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+		.blog_tag_item4_2 {
+			a {
+				padding: 7px 24px;
+				&:hover {
+					background: $color-green;
+					color: white;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.blog_tag1, .blog_tag2, .blog_tag3, .blog_tag4 {
+		margin-top: 30px;
+		a {
+			color: $color-gray;
+			border: 1px solid $color-gray;
+		}
+	}
+
+	.section_gallery {
+		padding-left: 30px;
+		p {
+			font-size: 13px;
+		}
+		img {
+			width: 100%;
+		}
+		.section_gallery_title {
+			display: block;
+			.section_gallery_name {
+				p {
+					color: black;
+					font-size: 18px;
+				}
+			}
+			.section_gallery_time {
+				i {
+					padding-right: 15px;
+					&::before {
+						color: $color-green;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+		.section_gallery_content {
+			margin-top: 32px;
+		}
+	}
+	
+	.gallery_pagination {
+			float: right;
+			padding: 0;
+			margin: 65px -20px 110px 0px;
+			.pagination {
+				display: inline-block;
+				a {
+					color: $color-gray;
+					float: left;
+					padding: 8px 16px;
+					text-decoration: none;
+					transition: background-color .3s;
+					border: 1px solid #ddd;
+					margin: 0 4px;
+					&.active {
+						background-color: $color-green;
+						color: black;
+						border: 1px solid #4CAF50;
+					}
+					&:hover:not(.active) {
+						background-color: $color-green;
+						color: black;
+					}
+				}
+			}
+		}
+}
