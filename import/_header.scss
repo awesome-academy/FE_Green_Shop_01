@@ -1,0 +1,172 @@
+@import "../import/variable";
+
+// Header Top
+.header_top {
+	background: #202020;
+	height: 32px;
+	.header_top_content {
+		height: 100%;
+		color: $color-gray-dark;
+	}
+	.header_navbar_left {
+		display: flex;
+	}
+	.header_icon_time {
+		height: 100%;
+		a {
+			font-size: $font-size;
+		}
+	}
+	.header_icon {
+		height: 100%;
+		a {
+			font-size: $font-size;
+			&:hover {
+				color: $color-green;
+				cursor: pointer
+			}
+		}
+		i {
+			font-size: $font-size;
+		}
+	}
+	.col-md-4 {
+		i {
+			width: 36px;
+			text-align: center;
+		}
+		span {
+			color: $color-gray-dark;
+		}
+	} 
+	.header_navbar_right {
+		a {
+			margin-right: 5%;
+			margin-left: 5%;
+			color: $color-gray;
+			i {
+				font-size: $font-size;
+			}
+			&:hover {
+				color: $color-green;
+			}
+		}
+	}
+}
+// //Header Top
+
+// Header
+.header {
+	background: url('../images/hdt.png');
+	.header_logo_name {
+		padding-top: 4%;
+	}
+	.header_img {
+		display: flex;
+		h1 {
+			font-family: 'VNF MuseoBook';
+			color: $color-green;
+		}
+		span {
+			font-family: 'VNF Shelia';
+		}
+	}
+	.header_logo_img {
+		padding: 0px;
+	}
+	.header_contact {
+		p.header_help{
+			margin-top: 30px;
+			text-align: center;
+			color: $color-gray-dark;
+		}
+		p.search {
+			color: $color-gray-dark;
+			background: #fff;
+			padding: 10px;
+			border-radius: 50px;
+			a {
+				float: right;
+				i {
+					border-left: 1px solid $color-gray;
+					&::before {
+						padding-left: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.header_card {
+		margin-top: 7%;
+		padding: 0;
+		a {
+			color: $color-gray-dark;
+			&:hover {
+				color: $color-green;
+				text-decoration: none;
+			}
+		}
+		i {
+			&::before {
+				padding-right: 5px;
+			}
+		}
+	}
+}
+// //Header
+
+
+// Menu
+.menu {
+	background: $color-green;
+	text-transform: uppercase;
+	a {
+		color: #ffffff;
+	}
+	.navbar {
+		width: 100%;
+	}
+	.navbar-nav {
+		padding-left: 15px;
+		li {
+			padding: 5px;
+			a {
+				padding: 14px 20px;
+				&:hover {
+					color: white;
+					text-decoration: underline;
+				}
+			}
+		}
+
+
+		ul.dropdown-menu {
+			li {
+				&:hover {
+					color: $color-green;
+					background: $color-green;
+				}
+				a {
+					color: $color-green;
+					text-decoration: none;
+					padding: 14px 19px;
+					&:hover {
+						color: white;
+						background: none;
+					}
+				}
+			}
+		}
+	}
+	.icon_menu {
+		width: 35px;
+		.menu_icon {
+			width: 35px;
+			height: 5px;
+			background-color: white;
+			margin: 6px 0;
+		}
+	}
+}
+// //Menu
