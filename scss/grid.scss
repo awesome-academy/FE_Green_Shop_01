@@ -1,0 +1,126 @@
+@import "../variable/color";
+@import "../scss/header";
+@import "../scss/footer";
+@import "../scss/scss_mixin/pagination";
+@import "../scss/scss_mixin/link_page";
+@import "../scss/scss_mixin/title";
+@import "../scss/scss_mixin/category";
+@import "../scss/scss_mixin/item_product";
+@import "../scss/scss_mixin/grid_list/circle";
+
+hr {
+  margin-bottom: 0px;
+}
+
+// Content
+.content {
+  .container {
+    padding-left: 3%;
+  }
+  // Content__section left
+  &__section {
+    &__category {
+      &__price {
+        @extend .section_product_item;
+      }
+    }
+
+    // Content__gallery right
+    &__gallery {
+      margin-top: 30px;
+      .row {
+        padding-left: 15px;
+      }
+      &__img {
+        margin: 0;
+        width: 100%;
+      }
+      &__content-top {
+        &__left {
+          i {
+            padding-top: 14%;
+            padding-right: 15px;
+            color: $color-gray;
+            &:hover {
+              color: $color-green;
+              cursor: pointer;
+            }
+          }
+        }
+        &__right {
+          padding: 5% 0;
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: $color-gray;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #f1f1f1;
+                color: black;
+              }
+            }
+          }
+          .dropdown:hover {
+            .dropdown-content {
+              display: block;
+            }
+            .dropbtn, .btn {
+              background-color: $color-green;
+              color: black;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+          a {
+            padding: 0 4%;
+          }
+          .dropbtn {
+            background-color: white;
+            color: $color-gray;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            i {
+              padding-left: 15px;
+              color: black;
+            }
+          }
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            border: 1px solid $color-gray;
+          }
+          .btn {
+            background: white;
+            border: none;
+            cursor: pointer;
+            color: $color-gray;
+            padding: 8px 8px 8px 13px;
+            i {
+              padding-left: 12px;
+              color: black;
+            }
+          }
+        }
+      }
+      &__content-bot {
+        &__item {
+          border: 1px solid $color-gray;
+          margin-bottom: 30px;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

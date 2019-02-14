@@ -1,0 +1,7 @@
+mixin footer_customer(name1, name2, name3, name4, name5)
+  p= name1
+  ul
+    -var arr = [name2, name3, name4, name5]
+      each value in arr
+        li
+          i.fas.fa-chevron-right= value

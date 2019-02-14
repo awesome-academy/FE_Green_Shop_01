@@ -1,0 +1,5 @@
+mixin header_drop(name1, name2, name3, link)
+	-var arr = [name1, name2, name3]
+        each value in arr
+          li
+            a(href= link)= value
