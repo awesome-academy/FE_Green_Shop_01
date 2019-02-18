@@ -1,0 +1,120 @@
+doctype html
+html
+  include ../pug/head
+  link(rel='stylesheet', type='text/css', href='../maincss/grid.css')
+    
+  body
+    .container-fluid
+      //- Header
+      include ../pug/header
+      //- //Header
+
+      include ../pug/pug_mixin/pagination
+      include ../pug/pug_mixin/link_page
+      include ../pug/pug_mixin/title
+      include ../pug/pug_mixin/category
+      include ../pug/pug_mixin/item_product
+      include ../pug/pug_mixin/grid_list/circle
+      
+      //- Content
+      +link_page('Danh sách sản phẩm')
+
+      #content.content.row
+        .container
+          .row.content__section
+            //- Content__section left
+            .col-md-3.content__section__category
+              .row.content__section__category__title
+                +title('Danh mục sản phẩm')
+
+              +category()
+
+              .row.content__section__category__title
+                +title('Tìm theo giá')
+
+              .row.content__section__category__price
+                script.
+                  var price = ["200.000 Đ - 400.000 Đ","400.000 Đ - 600.000 Đ","600.000 Đ - 800.000 Đ","800.000 Đ - 1.000.000 Đ","1.000.000 Đ - 2.000.000 Đ"];
+                  for(var i = 0; i < price.length; i++){
+                    document.write("<ul><li><i class='fas fa-chevron-right'><p>" + price[i] + "</ul></li></i></p>");
+                  }
+              .row.content__section__category__title
+                +title('Tìm theo màu')
+
+              +circle()
+
+            //- Content__section right
+            .col-md-9.content__section__gallery
+              .row.content__section__gallery__img
+                img(src='../images/bngrid.png')
+              .row.content__section__gallery__content-top
+                .col-md-6.content__section__gallery__content-top__left
+                  i.fas.fa-th
+                  i.fas.fa-th-list
+                .col-md-6.content__section__gallery__content-top__right
+                  a Sắp xếp theo
+                  .dropdown
+                    button.dropbtn Tên sản phẩm
+                      i.fas.fa-caret-down
+                    .dropdown-content
+                      -var arr= ['Tên sản phẩm', 'Giá tiền', 'Đánh giá']
+                        each value in arr
+                          a(href= "#")= value
+                  a Show
+                  .dropdown
+                    button.btn 15
+                      i.fas.fa-caret-down
+                    .dropdown-content.dropdown_content
+                      -var arr= ['14', '13', '12']
+                        each value in arr
+                          a(href= "#")= value
+
+              .row.content__section__gallery__content-bot
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp15.png', 'Cây Dạ Lam', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp13.png', 'Cây Danh Dự', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp11.png', 'Cây châm chim', '250.000 đ', '250.000 đ')
+
+              .row.content__section__gallery__content-bot
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp2.png', 'Cây cọ ta', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp8.png', 'Cây dứa nhỏ', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp1.png', 'Cây đa búp đỏ', '250.000 đ', '250.000 đ')
+              
+              .row.content__section__gallery__content-bot
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp15.png', 'Cây châm chim', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp13.png', 'Cây dứa nhỏ', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp11.png', 'Cây cọ ta', '250.000 đ', '250.000 đ')
+
+              .row.content__section__gallery__content-bot
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp2.png', 'Cây Dạ Lam', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp8.png', 'Cây Danh Dự', '250.000 đ', '250.000 đ')
+                .col-md-4
+                  .content__section__gallery__content-bot__item
+                    +item_product('../images/sp1.png', 'Cây dứa nhỏ', '250.000 đ', '250.000 đ')
+
+              +pagination()
+      //- //Content
+
+      //- Footer
+      include ../pug/footer
