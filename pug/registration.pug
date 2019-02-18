@@ -1,0 +1,55 @@
+doctype html
+html
+  include ../pug/head
+  link(rel='stylesheet', type='text/css', href='../maincss/registration.css')
+    
+  body
+    .container-fluid
+      //- Header
+      include ../pug/header
+      //- //Header
+      include ../pug/pug_mixin/link_page
+      include ../pug/pug_mixin/input
+      
+      +link_page('Đăng ký')
+
+      .section.row
+        .container
+          .row.content
+            .left.col-md-6
+              .title.row
+                p Thông tin cá nhân
+              .name.row
+                +input('Họ và tên')
+
+              .email.row
+                +input('Địa chỉ email')
+
+              .remember.row
+                label.container
+                  p Đăng ký nhận thông tin qua email
+                  input.checkbox(type='checkbox')
+                  span.checkmark
+
+              .title.row
+                p Thông tin tài khoản
+              .password.row
+                +input('Mật khẩu')
+
+              .button_row.row
+                .return
+                  .return_btn Quay lại
+                .register
+                  .register_btn Đăng ký
+
+            .right.col-md-6
+              .phone.row
+                +input('Số ĐT')
+
+              .website.row
+                +input('Website của bạn')
+                
+              .confirm_pd.row
+                +input('Nhập lại mật khẩu')
+      include ../pug/footer
+

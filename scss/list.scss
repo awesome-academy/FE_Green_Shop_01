@@ -1,0 +1,198 @@
+@import "../variable/color";
+@import "../scss/header";
+@import "../scss/footer";
+@import "../scss/scss_mixin/link_page";
+@import "../scss/scss_mixin/pagination";
+@import "../scss/scss_mixin/title";
+@import "../scss/scss_mixin/category";
+@import "../scss/scss_mixin/grid_list/circle";
+
+hr {
+  margin-bottom: 0px;
+}
+img {
+  width: 100%;
+}
+
+// Content
+.content {
+  .container {
+    padding-left: 3%;
+  }
+  // Content__section left
+  &__section {
+    &__category {
+      &__price {
+        @extend .section_product_item;
+      }
+    }
+
+    // Content__gallery right
+    &__gallery {
+      margin-top: 30px;
+      .row {
+        padding-left: 15px;
+      }
+      &__img {
+        margin: 0;
+        width: 100%;
+      }
+      &__content-top {
+        &__left {
+          i {
+            padding-top: 14%;
+            padding-right: 15px;
+            color: $color-gray;
+            &:hover {
+              color: $color-green;
+              cursor: pointer;
+            }
+          }
+        }
+        &__right {
+          padding: 5% 0;
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: $color-gray;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #f1f1f1;
+                color: black;
+              }
+            }
+          }
+          .dropdown:hover {
+            .dropdown-content {
+              display: block;
+            }
+            .dropbtn, .btn {
+              background-color: $color-green;
+              color: black;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+          a {
+            padding: 0 4%;
+          }
+          .dropbtn {
+            background-color: white;
+            color: $color-gray;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            i {
+              padding-left: 15px;
+              color: black;
+            }
+          }
+          .dropdown {
+            position: relative;
+            display: inline-block;
+            border: 1px solid $color-gray;
+          }
+          .btn {
+            background: white;
+            border: none;
+            cursor: pointer;
+            color: $color-gray;
+            padding: 8px 8px 8px 13px;
+            i {
+              padding-left: 12px;
+              color: black;
+            }
+          }
+        }
+      }
+      &__content-bot {
+        color: $color-gray;
+        margin-bottom: 30px;
+        .gallery_section_img {
+          padding: 0px 0px 0px 15px;
+          img {
+            border: 1px solid $color-gray;
+              border-right: none;
+            }
+        }
+        .gallery_section_item {
+          background: white;
+          border: 1px solid $color-gray;
+            border-left: none;
+            margin-left: -15px;
+        }
+        .gallery_name {
+          p {
+            margin-top: 10px;
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+        }
+        .gallery_rate {
+          font-size: $font-size;
+        }
+        .gallery_content {
+          p {
+            margin-bottom: 10px;
+              line-height: 25px;
+            }
+        }
+        .gallery_rate {
+          i {
+            color: $color-star;
+          }
+        }
+        .gallery_price {
+          color: $color-red;
+        }
+        .gallery_button_buy {
+          color: #363533;
+          border: 1px solid $color-gray;
+          border-radius: 45px;
+          padding: 10px 35px;
+          text-align: center;
+          cursor: pointer;
+          &:hover {
+            background: $color-green;
+            color: white;
+          }
+        }
+        .gallery_button_search {
+          border-radius: 50px;
+            padding: 10px 15px;
+            border: 1px solid $color-gray;
+            margin-left: 15px;
+            color: #363533;
+          cursor: pointer;
+            &:hover {
+            background: $color-green;
+            color: white;
+          }
+        }
+        .gallery_button_heart {
+          border-radius: 50px;
+            padding: 10px 15px;
+            border: 1px solid $color-gray;
+            margin-left: 15px;
+            color: #363533;
+          cursor: pointer;
+            &:hover {
+            background: $color-green;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+ 
+// //Content

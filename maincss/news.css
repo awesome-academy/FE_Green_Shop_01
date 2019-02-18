@@ -205,7 +205,6 @@ body p {
 }
 .footer__content__socials__icon a i:hover {
   color: #3fb871;
-  cursor: pointer;
 }
 .footer__content__email p {
   padding-left: 3px;
@@ -261,7 +260,6 @@ body p {
 .footer__about__customer {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 }
 .footer__about__customer p {
   color: #3fb871;
@@ -269,7 +267,7 @@ body p {
 }
 .footer__about__customer ul {
   padding: 0;
-  line-height: 48px;
+  line-height: 41px;
   font-size: 13px;
 }
 .footer__about__customer ul li {
@@ -311,12 +309,15 @@ body p {
 .footer__contact__right ul {
   padding: 10px 10px;
 }
-.footer__contact__right ul i {
+.footer__contact__right ul li {
+  display: inline;
+}
+.footer__contact__right ul li i {
   padding-right: 10px;
   font-size: 18px;
   color: #898989;
 }
-.footer__contact__right ul i:hover {
+.footer__contact__right ul li i:hover {
   color: #3fb871;
   cursor: pointer;
 }
@@ -341,116 +342,173 @@ body p {
   padding-left: 3px;
 }
 
-.map {
-  height: 490px;
-}
-.map .container-fluid {
-  padding: 0;
-}
-.map__link {
+.section_title_all {
   width: 100%;
-  height: 100%;
+  margin-bottom: 39px;
+  font-family: "RobotoSlab Bold";
+  padding-top: 56px;
+  color: #3fb871;
+}
+.section_title_all span {
+  border-bottom: 2px solid #3fb871;
+  padding-bottom: 17px;
+  font-weight: bold;
 }
 
-.content {
-  margin-top: 65px;
-  margin-bottom: 120px;
-}
-.content .row {
-  padding-left: 15px;
-}
-.content__left {
-  padding-right: 44px;
-}
-.content__left a {
-  font-size: 13px;
-  padding-bottom: 8px;
-  color: #898989;
-}
-.content__left i {
-  font-size: 8px;
-  color: #ee2b33;
-  position: relative;
-  top: -20%;
-  left: 5%;
-}
-.content__left i::before {
-  padding-right: 5px;
-}
-.content__left input {
-  margin-bottom: 30px;
+.section_product_item ul {
+  padding: 0;
   width: 100%;
-  padding: 9px;
 }
-.content__left__title p {
-  font-size: 18px;
-  text-transform: uppercase;
+.section_product_item ul li {
+  list-style: none;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 10px 0px;
+}
+.section_product_item ul li:hover {
   color: #3fb871;
-  font-weight: bold;
-  padding-bottom: 19px;
-}
-.content__left__comment input {
-  padding-bottom: 160px;
-}
-.content__left_button {
-  float: right;
-}
-.content__left_button__send {
-  border-radius: 50px;
-  padding: 10px 62px;
-  color: #3fb871;
-  text-transform: uppercase;
-  margin-top: 28px;
-  margin-bottom: 25px;
-  border: 1px solid #3fb871;
-}
-.content__left_button__send:hover {
-  color: white;
-  background: #3fb871;
-  border: 1px solid #3fb871;
   cursor: pointer;
 }
-.content__right__title__main {
-  font-family: "VNF_Museo Slab";
-  font-size: 54px;
-  color: #3fb871;
+.section_product_item ul li i {
   width: 100%;
+  position: relative;
+  color: #aaaaaa;
 }
-.content__right__title span {
-  font-family: "Shelia VNF Regular";
-  font-size: 70px;
+.section_product_item ul li i p.modified {
   color: #3fb871;
 }
-.content__right__title__text {
-  font-size: 20px;
-  margin-top: -27px;
+.section_product_item ul li i p {
+  display: inline;
+  margin: 0;
+  font-size: 15px;
+  width: 100%;
+  position: absolute;
 }
-.content__right__content {
-  color: #898989;
-}
-.content__right__content p {
-  font-size: 13px;
-  padding-bottom: 40px;
-  padding-top: 35px;
-}
-.content__right__icon {
-  margin-left: 0;
-}
-.content__right__icon i {
-  margin-left: -10px;
-  font-size: 13px;
+.section_product_item ul li i p:hover {
   color: #3fb871;
+  cursor: pointer;
 }
-.content__right__icon i::before {
+.section_product_item ul li i::before {
   padding-right: 5px;
 }
-.content__right__icon i a {
-  color: #3fb871;
-  font-weight: initial;
-  padding-left: 5px;
+
+.blog_tag1 a.name {
+  padding: 7px 13px;
 }
-.content__right__icon--modified {
-  padding-bottom: 18px;
+.blog_tag1 a.name:hover {
+  background: #3fb871;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-/*# sourceMappingURL=contact.css.map */
+.blog_tag2 a.name {
+  padding: 7px 8px;
+}
+.blog_tag2 a.name:hover {
+  background: #3fb871;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blog_tag3 a.name {
+  padding: 7px 22px;
+}
+.blog_tag3 a.name:hover {
+  background: #3fb871;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blog_tag4 a.name {
+  padding: 7px 24px;
+}
+.blog_tag4 a.name:hover {
+  background: #3fb871;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blog_tag1, .blog_tag2, .blog_tag3, .blog_tag4 {
+  margin-top: 30px;
+}
+.blog_tag1 a, .blog_tag2 a, .blog_tag3 a, .blog_tag4 a {
+  color: #aaaaaa;
+}
+.blog_tag1 a.name, .blog_tag2 a.name, .blog_tag3 a.name, .blog_tag4 a.name {
+  margin-right: 13px;
+  border: 1px solid #aaaaaa;
+  color: #aaaaaa;
+}
+
+.img, .name {
+  padding: 0;
+  padding-bottom: 20px;
+}
+.img p a, .name p a {
+  color: black;
+  font-size: 13px;
+  text-decoration: none;
+}
+.img p a:hover, .name p a:hover {
+  color: #3fb871;
+}
+
+.gallery_pagination {
+  float: right;
+  padding: 0;
+  margin: 50px -5px 128px 0px;
+}
+.gallery_pagination .pagination {
+  display: inline-block;
+}
+.gallery_pagination .pagination a {
+  color: #aaaaaa;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+.gallery_pagination .pagination a.active {
+  background-color: #3fb871;
+  color: black;
+  border: 1px solid #4CAF50;
+}
+.gallery_pagination .pagination a:hover:not(.active) {
+  background-color: #3fb871;
+  color: black;
+}
+
+.content .container {
+  padding-left: 3%;
+}
+.content .content__right {
+  padding-left: 45px;
+  margin-top: 40px;
+}
+.content .content__right img {
+  width: 100%;
+}
+.content .content__right .section_gallery_title {
+  display: block;
+}
+.content .content__right .section_gallery_title .section_gallery_name p {
+  color: black;
+  font-size: 18px;
+}
+.content .content__right .section_gallery_title .section_gallery_time i {
+  padding-right: 15px;
+}
+.content .content__right .section_gallery_title .section_gallery_time i::before {
+  color: #3fb871;
+  padding-right: 10px;
+}
+.content .content__right .section_gallery_content {
+  margin-top: 32px;
+}
+
+/*# sourceMappingURL=news.css.map */

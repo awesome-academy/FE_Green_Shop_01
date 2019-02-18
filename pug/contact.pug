@@ -11,6 +11,7 @@ html
         
       //- Content
       include ../pug/pug_mixin/link_page
+      include ../pug/pug_mixin/input
 
       +link_page('Liên hệ')
 
@@ -24,21 +25,17 @@ html
               .row.content__left__title
                 p Thông tin cá nhân
               .row.content__left__name
-                a Họ và tên
-                  i.fas.fa-star-of-life :
-                input.textbox(type='textbox')
+                +input('Họ và tên')
+                
               .row.content__left__email
-                a Địa chỉ email
-                  i.fas.fa-star-of-life :
-                input.textbox(type='textbox')
+                +input('Địa chỉ email')
+                
               .row.content__left__phone
-                a Số ĐT
-                  i.fas.fa-star-of-life :
-                input.textbox(type='textbox')
+                +input('Số ĐT')
+                
               .row.content__left__comment
-                a Bình luận
-                  i.fas.fa-star-of-life :
-                input.textbox.content__left__comment_txt(type='textbox')
+                +input('Bình luận')
+                
               .row.content__left_button
                 .content__left_button__send Gửi
 
