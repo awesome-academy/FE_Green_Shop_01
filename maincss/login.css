@@ -205,7 +205,6 @@ body p {
 }
 .footer__content__socials__icon a i:hover {
   color: #3fb871;
-  cursor: pointer;
 }
 .footer__content__email p {
   padding-left: 3px;
@@ -261,7 +260,6 @@ body p {
 .footer__about__customer {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 }
 .footer__about__customer p {
   color: #3fb871;
@@ -269,7 +267,7 @@ body p {
 }
 .footer__about__customer ul {
   padding: 0;
-  line-height: 48px;
+  line-height: 41px;
   font-size: 13px;
 }
 .footer__about__customer ul li {
@@ -311,12 +309,15 @@ body p {
 .footer__contact__right ul {
   padding: 10px 10px;
 }
-.footer__contact__right ul i {
+.footer__contact__right ul li {
+  display: inline;
+}
+.footer__contact__right ul li i {
   padding-right: 10px;
   font-size: 18px;
   color: #898989;
 }
-.footer__contact__right ul i:hover {
+.footer__contact__right ul li i:hover {
   color: #3fb871;
   cursor: pointer;
 }
@@ -341,116 +342,141 @@ body p {
   padding-left: 3px;
 }
 
-.map {
-  height: 490px;
-}
-.map .container-fluid {
-  padding: 0;
-}
-.map__link {
-  width: 100%;
-  height: 100%;
-}
-
 .content {
-  margin-top: 65px;
-  margin-bottom: 120px;
+  padding-left: 30px;
+  margin-top: 30px;
 }
-.content .row {
-  padding-left: 15px;
-}
-.content__left {
-  padding-right: 44px;
-}
-.content__left a {
-  font-size: 13px;
-  padding-bottom: 8px;
-  color: #898989;
-}
-.content__left i {
-  font-size: 8px;
-  color: #ee2b33;
-  position: relative;
-  top: -20%;
-  left: 5%;
-}
-.content__left i::before {
-  padding-right: 5px;
-}
-.content__left input {
-  margin-bottom: 30px;
-  width: 100%;
-  padding: 9px;
-}
-.content__left__title p {
+.content .title-all p {
   font-size: 18px;
   text-transform: uppercase;
   color: #3fb871;
   font-weight: bold;
-  padding-bottom: 19px;
+  padding-bottom: 50px;
 }
-.content__left__comment input {
-  padding-bottom: 160px;
+.content__left {
+  padding-right: 45px;
 }
-.content__left_button {
+.content__left__email {
+  margin-bottom: 45px;
+}
+.content__left .textbox--modified {
+  width: 100%;
+  padding: 9px;
+}
+.content__left__password {
+  margin-bottom: 63px;
+}
+.content__left__remember {
+  height: 20px;
+}
+.content__left__remember__check {
+  padding: 0;
+}
+.content__left__remember__check p {
+  color: black;
+}
+.content__left__remember__check .label {
   float: right;
 }
-.content__left_button__send {
+.content__left__remember__check input.checkbox {
+  float: right;
+}
+.content__left__remember__check p {
+  font-size: 14px;
+  color: black;
+}
+.content__left__remember__check .label {
+  display: block;
+  position: relative;
+  padding-left: 17px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.content__left__remember__check .label input {
+  width: 0;
+}
+.content__left__remember__check .checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border: 1px solid #7d7d7d;
+}
+.content__left__remember__check .label input:checked ~ .checkmark {
+  background-color: green;
+}
+.content__left__remember__check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.content__left__remember__check .label input:checked ~ .checkmark:after {
+  display: block;
+}
+.content__left__remember__check .label .checkmark:after {
+  left: 3px;
+  top: -1px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.content__left__remember__forgot p {
+  color: #aaaaaa;
+  text-decoration: underline;
+  font-style: italic;
+}
+.content__left__button {
+  margin-top: 45px;
+  margin-bottom: 110px;
+}
+.content__left__button__payment {
+  position: relative;
+}
+.content__left__button__payment__text {
   border-radius: 50px;
-  padding: 10px 62px;
+  padding: 10px 33px;
   color: #3fb871;
-  text-transform: uppercase;
-  margin-top: 28px;
-  margin-bottom: 25px;
   border: 1px solid #3fb871;
 }
-.content__left_button__send:hover {
-  color: white;
+.content__left__button__payment__text:hover {
   background: #3fb871;
+  color: white;
   border: 1px solid #3fb871;
   cursor: pointer;
 }
-.content__right__title__main {
-  font-family: "VNF_Museo Slab";
-  font-size: 54px;
+.content__right .title-all p {
+  padding-bottom: 23px;
+}
+.content__right .title-all a {
+  font-size: 15px;
+  color: #aaaaaa;
+}
+.content__right__button {
+  margin-top: 35px;
+}
+.content__right__button__payment {
+  position: relative;
+}
+.content__right__button__payment__text {
+  border-radius: 50px;
+  padding: 10px 33px;
   color: #3fb871;
-  width: 100%;
+  border: 1px solid #3fb871;
 }
-.content__right__title span {
-  font-family: "Shelia VNF Regular";
-  font-size: 70px;
-  color: #3fb871;
-}
-.content__right__title__text {
-  font-size: 20px;
-  margin-top: -27px;
-}
-.content__right__content {
-  color: #898989;
-}
-.content__right__content p {
-  font-size: 13px;
-  padding-bottom: 40px;
-  padding-top: 35px;
-}
-.content__right__icon {
-  margin-left: 0;
-}
-.content__right__icon i {
-  margin-left: -10px;
-  font-size: 13px;
-  color: #3fb871;
-}
-.content__right__icon i::before {
-  padding-right: 5px;
-}
-.content__right__icon i a {
-  color: #3fb871;
-  font-weight: initial;
-  padding-left: 5px;
-}
-.content__right__icon--modified {
-  padding-bottom: 18px;
+.content__right__button__payment__text:hover {
+  background: #3fb871;
+  color: white;
+  border: 1px solid #3fb871;
+  cursor: pointer;
 }
 
-/*# sourceMappingURL=contact.css.map */
+/*# sourceMappingURL=login.css.map */

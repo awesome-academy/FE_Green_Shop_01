@@ -1,0 +1,88 @@
+doctype html
+html
+  include ../pug/head
+  link(rel='stylesheet', type='text/css', href='../maincss/list.css')
+    
+  body
+    .container-fluid
+      //- Header
+      include ../pug/header
+      //- //Header
+
+      include ../pug/pug_mixin/grid_list/list_item
+      include ../pug/pug_mixin/pagination
+      include ../pug/pug_mixin/link_page
+      include ../pug/pug_mixin/title
+      include ../pug/pug_mixin/category
+      include ../pug/pug_mixin/grid_list/circle
+
+      +link_page('Danh sách sản phẩm')
+
+      //- Content
+      #content.content.row
+        .container
+          .row.content__section
+            //- Content__section left
+            .col-md-3.content__section__category
+              .row.content__section__category__title
+                +title('Danh mục sản phẩm')
+
+              +category()
+
+              .row.content__section__category__title
+                +title('Tìm theo giá')
+
+              .row.content__section__category__price
+                script.
+                  var price = ["200.000 Đ - 400.000 Đ","400.000 Đ - 600.000 Đ","600.000 Đ - 800.000 Đ","800.000 Đ - 1.000.000 Đ","1.000.000 Đ - 2.000.000 Đ"];
+                  for(var i = 0; i < price.length; i++){
+                    document.write("<ul><li><i class='fas fa-chevron-right'><p>" + price[i] + "</ul></li></i></p>");
+                  }
+              .row.content__section__category__title
+                +title('Tìm theo màu')
+
+              +circle()
+
+            //- Content right
+            .col-md-9.content__section__gallery
+              .row.content__section__gallery__img
+                img(src='../images/bngrid.png')
+              .row.content__section__gallery__content-top
+                .col-md-6.content__section__gallery__content-top__left
+                  i.fas.fa-th
+                  i.fas.fa-th-list
+                .col-md-6.content__section__gallery__content-top__right
+                  a Sắp xếp theo
+                  .dropdown
+                    button.dropbtn Tên sản phẩm
+                      i.fas.fa-caret-down
+                    .dropdown-content
+                      -var arr = ['Tên sản phẩm', 'Giá tiền', 'Đánh giá']
+                        each value in arr
+                          a(href='#')= value
+
+                  a Show
+                  .dropdown
+                    button.btn 15
+                      i.fas.fa-caret-down
+                    .dropdown-content.dropdown_content
+                      -var arr = ['14', '13', '12']
+                        each value in arr
+                          a(href='#')= value
+
+              .content__section__gallery__content-bot.row
+                +list_item('../images/sp15.png')
+              .content__section__gallery__content-bot.row
+                +list_item('../images/sp1.png')
+              .content__section__gallery__content-bot.row
+                +list_item('../images/sp2.png')
+              .content__section__gallery__content-bot.row
+                +list_item('../images/sp5.png')
+              .content__section__gallery__content-bot.row
+                +list_item('../images/sp12.png')
+
+              +pagination()
+      //- //Content
+
+      //- Footer
+      include ../pug/footer
