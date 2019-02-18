@@ -64,6 +64,7 @@
               | Sản Phẩm
               span.caret
             ul.dropdown-menu.menu__navbar__name__dropdown
+              include ../pug/pug_mixin/header_drop
               +header_drop('Sản Phẩm 1', 'Sản Phẩm 2', 'Sản Phẩm 3', '../html/list.html')
 
           li
@@ -71,7 +72,7 @@
               | Sản Phẩm Mới
               span.caret
             ul.dropdown-menu.menu__navbar__name__dropdown.modified
-              +header_drop('Sản Phẩm Mới 1', 'Sản Phẩm 2 Mới', 'Sản Phẩm Mới 3', '../html/list.html')
+              +header_drop('Sản Phẩm Mới 1', 'Sản Phẩm 2 Mới', 'Sản Phẩm Mới 3', '../html/detail.html')
               
           li
             a(href='../html/news.html') Tin Tức

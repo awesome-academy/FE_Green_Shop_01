@@ -13,6 +13,7 @@ html
         include ../pug/pug_mixin/link_page
         include ../pug/pug_mixin/title
         include ../pug/pug_mixin/item_product
+        include ../pug/pug_mixin/detail_socials
 
         +link_page('Cây dạ lam')
 
@@ -57,16 +58,7 @@ html
                     i.fas.fa-heart
 
                 .detail__section__item__socials
-                  .detail__section__item__socials__facebook
-                    i.fab.fa-facebook-square Like
-                    span.tooltiptext 0
-                  .detail__section__item__socials__tweet
-                    i.fab.fa-twitter Tweet
-                  .detail__section__item__socials__google
-                    i.fab.fa-google-plus-g 1
-                    span.tooltiptext 0
-                  .detail__section__item__socials__share
-                    i.fas.fa-plus-square Share
+                  +detail_socials()
 
             .row.detail__img
               -var a= ['../images/dt1.png', '../images/dt2.png', '../images/dt3.png', '../images/dt4.png', '../images/dt5.png']
